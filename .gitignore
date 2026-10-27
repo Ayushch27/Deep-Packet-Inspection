@@ -1,0 +1,8 @@
+target/
+maven/
+maven.zip
+data/*.db
+logs/
+.idea/
+*.iml
+.vscode/

@@ -1,0 +1,16 @@
+{
+  "block_ips": [
+    "192.168.1.100"
+  ],
+  "allow_ips": [],
+  "block_domains": [
+    "example.com",
+    "malicious.org"
+  ],
+  "allow_domains": [],
+  "alert_rules": {
+    "port_scan": true,
+    "syn_flood": true,
+    "icmp_flood": true
+  }
+}
