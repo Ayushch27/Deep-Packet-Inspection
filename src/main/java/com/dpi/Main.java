@@ -114,17 +114,17 @@ public class Main {
                 stats.recordFlowCreated();
             }
             
+            // DPI Analysis
+            if (flow != null) {
+                dpiEngine.analyze(flow, info);
+                stats.recordAppProtocol(flow.getApplicationProtocol());
+            }
+
             // CLI Filtering
             for (com.dpi.rules.PacketFilter pf : cliFilters) {
                 if (!pf.matches(info, flow)) {
                     return;
                 }
-            }
-
-            // DPI
-            if (flow != null) {
-                dpiEngine.analyze(flow, info);
-                stats.recordAppProtocol(flow.getApplicationProtocol());
             }
             
             // Threats
